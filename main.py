@@ -3,11 +3,11 @@ from School import School
 from Student import Student
 
 schoolList=["A","B","C","D"]
-acceptQuota=[5, 2, 1, 3]
+acceptQuota=[1, 1, 1, 1]
 
 studentList=[1,2,3,4]
 score=[100 ,95, 83, 90 ]
-choice=[["A","B","C"],["A","C","B"],["A","D","C"],["B","A","D"]]
+choice=[["A","B","C"],["A","B","C"],["A","B","C"],["A","B","C"]]
 
 
 if __name__=="__main__":
@@ -18,8 +18,19 @@ if __name__=="__main__":
     assert len(studentList)==len(score)
     assert len(studentList)==len(choice)
     for i in range(len(schoolList)):
-        match.schoolList.append(School(schoolList[i],acceptQuota[i]))
+        match.schoolList[schoolList[i]] = School(schoolList[i],acceptQuota[i])
     for i in range(len(studentList)):
         match.studentQueue.append(Student(studentList[i],score[i],choice[i]))
+    match.start_match()
+    #列印榜單
+    for i in match.schoolList.keys():
+        print('college',i,end = '\t')
+        print('students',end = ' ')
+        for j in match.schoolList[i].accept.array:
+            print(j,end = ' ')
+        print('')
+
+
+    
 
     
