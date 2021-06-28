@@ -1,7 +1,6 @@
 class Student():
-    def __init__(self,studentName,score):
+    def __init__(self,studentName,score,choiceList):
         self.name=studentName
         self.score=score
-        def setChoice(self,choiceList):
-            self.choice=choiceList
+        self.choice=choiceList
 
