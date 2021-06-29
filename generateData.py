@@ -13,11 +13,15 @@ studentList=[str(i) for i in range(1,studentNum+1)]
 score=random.sample(range(100), studentNum) #分數不重複
 choice=[random.sample(schoolList,choiceNum) for _ in range(studentNum)]
 
-print(schoolList)
-print(acceptQuota)
-print(studentList)
-print(score)
-print(choice)
+print('school'+'\t'+'Quota')
+for i in range(len(schoolList)):
+    print(schoolList[i],end = '\t')
+    print(acceptQuota[i])
+print('student'+'\t'+'score'+'\t'+'choice')
+for i in range(len(studentList)):
+    print(studentList[i],end = '\t')
+    print(score[i],end = '\t')
+    print(choice[i])
 
 data={
     'schoolList':schoolList,
