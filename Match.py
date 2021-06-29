@@ -12,13 +12,21 @@ class Match():
             for i in self.studentQueue:
                 if len(i.choice) != 0:
                     return 0
+            # As long as not all of the students run out of their choices
+            # the matching continues
+            # This results in the problem that we could run into the student
+            # in matching with no choice
+            # We'll fix it in start_match
             return 1
 
     def start_match(self):
         while self.finish() != 1:
             #抓出申請序列第一個學生以及他的第一志願
             student_now = self.studentQueue.pop(0)
-            first_choice = self.schoolList[student_now.choice.pop(0)]
+            try:
+                first_choice = self.schoolList[student_now.choice.pop(0)]
+            except:
+                continue
             #若學校招生沒滿，直接錄取
             if first_choice.accept.size < first_choice.quota:
                 first_choice.accept.insert(student_now)
