@@ -4,9 +4,6 @@ class Match():
         self.studentQueue = []
         self.schoolList = {}
 
-    def startMatch(self):
-        pass
-
     def finish(self):
         #結束條件：申請序列學生數為0 or 申請序列中的學生都沒志願了
         if len(self.studentQueue) == 0:
