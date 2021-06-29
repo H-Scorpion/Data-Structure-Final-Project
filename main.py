@@ -1,13 +1,17 @@
+import json
 from Match import Match
 from School import School   
 from Student import Student
 
-schoolList=["A","B","C","D"]
-acceptQuota=[1, 1, 1, 1]
+with open("input_2.json",'r') as f:
+    data=json.load(f)
+    schoolList=data['schoolList']
+    acceptQuota=data['acceptQuota']
 
-studentList=[1,2,3,4]
-score=[100 ,95, 83, 90 ]
-choice=[["A","B","C"],["A","B","C"],["A","B","C"],["A","B","C"]]
+    studentList=data['studentList']
+    score=data['score']
+    choice=data['choice']
+
 
 
 if __name__=="__main__":

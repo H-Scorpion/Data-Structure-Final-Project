@@ -49,22 +49,21 @@ class AcceptedStudentHeap: #Please store and implement MinHeap data structure wi
         else:
             return self.array[0]
     def removeMin(self):
-        ### TODO ###
-        ### You need not return or print anything with this function. ###
         if len(self.array) == 1:
             return self.array.pop()
         else:
-            item = self.array.pop()
-            old_first = self.array[0]
+            item = self.array.pop() #get the last element of the heap
+            old_first = self.array[0] #get the first element of the heap,i.e., originally the smallest value
             self.array[0] = item
             index = 0
             while(self.hasLeftChild(index)):
                 smallerIndex = self.getLeftChildIndex(index)
-                if self.hasRightChild(index):
-                    if self.array[self.getRightChildIndex(index)] < self.array[self.getLeftChildIndex(index)]:
+                if self.hasRightChild(index): #wish to find the smaller one in the child
+                    # We should compare the student's scores instead of student themselves
+                    if self.array[self.getRightChildIndex(index)].score < self.array[self.getLeftChildIndex(index)].score:
                         smallerIndex=self.getRightChildIndex(index)
-                
-                if item < self.array[smallerIndex]:
+                #Same, compare the student's scores
+                if item.score < self.array[smallerIndex].score:
                     break
                 else:
                     self.array[index],self.array[smallerIndex] = self.array[smallerIndex],self.array[index]
