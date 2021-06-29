@@ -3,4 +3,7 @@ class Student():
         self.name=studentName
         self.score=score
         self.choice=choiceList
+    def __str__(self):
+        return str(self.name)
+
 

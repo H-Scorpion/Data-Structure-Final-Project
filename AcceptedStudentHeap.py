@@ -35,17 +35,14 @@ class AcceptedStudentHeap: #Please store and implement MinHeap data structure wi
         if 2*index+2>len(self.array)-1:return 0
         else:return 1
     
-    def insert(self, item): #insert new item        
-        ### TODO ### 
-        ### input: a value ###
-        ### You need not return or print anything with this function. ###
+    def insert(self, item): #insert new item
         self.array.append(item)
-        index=len(self.array)-1
-        while((index!=0) and item<self.array[self.getParentIndex(index)]):
-            self.array[index],self.array[self.getParentIndex(index)]=self.array[self.getParentIndex(index)],self.array[index]
-            
-            index=self.getParentIndex(index)
-        self.size=len(self.array)
+        index = len(self.array)-1
+        #比較學生的分數
+        while((index != 0) and item.score < self.array[self.getParentIndex(index)].score):
+            self.array[index],self.array[self.getParentIndex(index)] = self.array[self.getParentIndex(index)],self.array[index]
+            index = self.getParentIndex(index)
+        self.size = len(self.array)
     def peek(self):  #Find Minimum item
         if self.size == 0:
             return
@@ -54,20 +51,27 @@ class AcceptedStudentHeap: #Please store and implement MinHeap data structure wi
     def removeMin(self):
         ### TODO ###
         ### You need not return or print anything with this function. ###
-        item=self.array.pop()
-        self.array[0]=item
-        index=0
-        while(self.hasLeftChild(index)):
-            smallerIndex=self.getLeftChildIndex(index)
-            if self.hasRightChild(index):
-                if self.array[self.getRightChildIndex(index)]<self.array[self.getLeftChildIndex(index)]:
-                    smallerIndex=self.getRightChildIndex(index)
+        if len(self.array) == 1:
+            return self.array.pop()
+        else:
+            item = self.array.pop()
+            old_first = self.array[0]
+            self.array[0] = item
+            index = 0
+            while(self.hasLeftChild(index)):
+                smallerIndex = self.getLeftChildIndex(index)
+                if self.hasRightChild(index):
+                    if self.array[self.getRightChildIndex(index)] < self.array[self.getLeftChildIndex(index)]:
+                        smallerIndex=self.getRightChildIndex(index)
+                
+                if item < self.array[smallerIndex]:
+                    break
+                else:
+                    self.array[index],self.array[smallerIndex] = self.array[smallerIndex],self.array[index]
+                    index = smallerIndex
+            self.size = len(self.array)
+            #改為要回傳原本的min
+            return old_first
 
-            if item<self.array[smallerIndex]:
-                break
-            else:
-                self.array[index],self.array[smallerIndex]=self.array[smallerIndex],self.array[index]
-                index=smallerIndex
-        self.size=len(self.array)
     def showMinHeap(self):  #Show MinHeap with array
         return self.array
