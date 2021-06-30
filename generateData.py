@@ -45,11 +45,12 @@ if __name__ == '__main__':
     parser.add_argument('--schoolNum', default=5)
     parser.add_argument('--studentNum', default=20)
     parser.add_argument('--choiceNum', default=5)
+    parser.add_argument('--output', default='input_2.json')
 
     args = parser.parse_args()
 
     data = genData(int(args.schoolNum),int(args.studentNum),int(args.choiceNum))
 
     ret=json.dumps(data)
-    with open('input_2.json','w') as f:
+    with open(args.output,'w') as f:
         f.write(ret)

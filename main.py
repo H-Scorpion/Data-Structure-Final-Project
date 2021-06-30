@@ -1,22 +1,31 @@
 import json
+import argparse
 from Match import Match
 from School import School   
 from Student import Student
 
-with open("input_2.json",'r') as f:
-    data=json.load(f)
-    schoolList=data['schoolList']
-    acceptQuota=data['acceptQuota']
-    schoolweighted=data['schoolweighted']
-    studentList=data['studentList']
-    score=data['score']
-    choice=data['choice']
+
 
 
 
 if __name__=="__main__":
     # Initialize
     # Put all the school and student data in to the class Match
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input', default='input_2.json')
+
+    args = parser.parse_args()
+
+    with open(args.input,'r') as f:
+        data=json.load(f)
+        schoolList=data['schoolList']
+        acceptQuota=data['acceptQuota']
+        schoolweighted=data['schoolweighted']
+        studentList=data['studentList']
+        score=data['score']
+        choice=data['choice']
+
+
     match = Match()
     assert len(schoolList)==len(acceptQuota)
     assert len(schoolList)==len(schoolweighted)
