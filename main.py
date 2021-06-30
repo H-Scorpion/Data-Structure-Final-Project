@@ -50,6 +50,9 @@ def printResult(match):
         for j in match.schoolList[i].accept.array:
             print(j,end = ' ')
         print('')
+    print('students without school:')
+    for i in match.studentQueue:
+        print(i,end = ' ')
 
 if __name__=="__main__":
 
