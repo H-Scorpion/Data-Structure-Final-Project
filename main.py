@@ -7,7 +7,7 @@ from Student import Student
 
 def parseArg():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', default='input_2.json')
+    parser.add_argument('--input', default='input_5.json')
     args = parser.parse_args()
     return args
 
@@ -17,6 +17,7 @@ def readData():
 
     assert len(data['schoolList'])==len(data['acceptQuota'])        
     assert len(data['schoolList'])==len(data['schoolweighted'])
+    assert len(data['schoolList'])==len(data['overquota'])
     assert len(data['studentList'])==len(data['score'])
     assert len(data['studentList'])==len(data['choice'])
     return data
@@ -27,6 +28,7 @@ def initialize(data):
     schoolList=data['schoolList']
     acceptQuota=data['acceptQuota']
     schoolweighted=data['schoolweighted']
+    overquota = data['overquota']
     studentList=data['studentList']
     score=data['score']
     choice=data['choice']
@@ -34,7 +36,8 @@ def initialize(data):
     match = Match()
 
     for i in range(len(schoolList)):
-        match.schoolList[schoolList[i]] = School(schoolList[i],acceptQuota[i],schoolweighted[i])
+        match.schoolList[schoolList[i]] = School(schoolList[i],acceptQuota[i],schoolweighted[i],overquota[i])
+        #print(schoolList[i],acceptQuota[i],schoolweighted[i],overquota[i])
     for i in range(len(studentList)):
         match.studentQueue.append(Student(studentList[i],score[i],choice[i]))
     return match
