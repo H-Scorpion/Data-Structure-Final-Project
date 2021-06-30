@@ -3,6 +3,8 @@ class Match():
     def __init__(self):
         self.studentQueue = []
         self.schoolList = {}
+        # A list dealing with student without school
+        self.failedStudent=[]
 
     def finish(self):
         #結束條件：申請序列學生數為0 or 申請序列中的學生都沒志願了
@@ -17,6 +19,7 @@ class Match():
             # This results in the problem that we could run into the student
             # in matching with no choice
             # We'll fix it in start_match
+            self.failedStudent+=self.studentQueue
             return 1
 
     def start_match(self):
@@ -27,6 +30,7 @@ class Match():
                 first_choice = self.schoolList[student_now.choice.pop(0)]
                 student_now.weightedscore = first_choice.find_weighted(student_now)
             except:
+                self.failedStudent.append(student_now)
                 continue
             #若學校招生沒滿，直接錄取
             if first_choice.accept.size < first_choice.quota:

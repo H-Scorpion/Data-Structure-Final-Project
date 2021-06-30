@@ -51,8 +51,9 @@ def printResult(match):
             print(j,end = ' ')
         print('')
     print('students without school:')
-    for i in match.studentQueue:
+    for i in match.failedStudent:
         print(i,end = ' ')
+    print('\n',end = '')
 
 if __name__=="__main__":
 
@@ -62,9 +63,6 @@ if __name__=="__main__":
     t1=time.time()
     match.start_match()
     t2=time.time()
-
-    # for i in range(100):
-
 
     printResult(match)    
 
