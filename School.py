@@ -1,10 +1,11 @@
 from AcceptedStudentHeap import AcceptedStudentHeap
 class School():
-    def __init__(self,schoolName,quota,weighted):
+    def __init__(self,schoolName,quota,weighted,overquota):
         self.name = schoolName
         self.quota = quota
         self.accept = AcceptedStudentHeap()
         self.weighted = weighted
+        self.overquota = overquota
     def __str__(self):
         return str(self.name)
     def find_weighted(self,student):
