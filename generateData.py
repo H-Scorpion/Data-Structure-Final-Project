@@ -49,9 +49,9 @@ def printData(data):
 
 if __name__ == '__main__':    
     parser = argparse.ArgumentParser()
-    parser.add_argument('--schoolNum', default=5)
-    parser.add_argument('--studentNum', default=20)
-    parser.add_argument('--choiceNum', default=5)
+    parser.add_argument('--schoolNum', default=10)
+    parser.add_argument('--studentNum', default=100)
+    parser.add_argument('--choiceNum', default=10)
     parser.add_argument('--output', default='input_5.json')
 
     args = parser.parse_args()
