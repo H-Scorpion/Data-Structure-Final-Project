@@ -25,6 +25,7 @@ class Match():
             student_now = self.studentQueue.pop(0)
             try:
                 first_choice = self.schoolList[student_now.choice.pop(0)]
+                student_now.weightedscore = first_choice.find_weighted(student_now)
             except:
                 continue
             #若學校招生沒滿，直接錄取
@@ -34,7 +35,7 @@ class Match():
             else:
                 lowest_student = first_choice.accept.peek()
                 #若申請者分數比原本的最低分高則錄取，並將原本最低分放回申請序列
-                if student_now.score > lowest_student.score:
+                if student_now.weightedscore > lowest_student.weightedscore:
                     first_choice.accept.removeMin()
                     first_choice.accept.insert(student_now)
                     self.studentQueue.append(lowest_student)

@@ -39,7 +39,7 @@ class AcceptedStudentHeap: #Please store and implement MinHeap data structure wi
         self.array.append(item)
         index = len(self.array)-1
         #比較學生的分數
-        while((index != 0) and item.score < self.array[self.getParentIndex(index)].score):
+        while((index != 0) and item.weightedscore < self.array[self.getParentIndex(index)].weightedscore):
             self.array[index],self.array[self.getParentIndex(index)] = self.array[self.getParentIndex(index)],self.array[index]
             index = self.getParentIndex(index)
         self.size = len(self.array)
@@ -60,10 +60,10 @@ class AcceptedStudentHeap: #Please store and implement MinHeap data structure wi
                 smallerIndex = self.getLeftChildIndex(index)
                 if self.hasRightChild(index): #wish to find the smaller one in the child
                     # We should compare the student's scores instead of student themselves
-                    if self.array[self.getRightChildIndex(index)].score < self.array[self.getLeftChildIndex(index)].score:
+                    if self.array[self.getRightChildIndex(index)].weightedscore < self.array[self.getLeftChildIndex(index)].weightedscore:
                         smallerIndex=self.getRightChildIndex(index)
                 #Same, compare the student's scores
-                if item.score < self.array[smallerIndex].score:
+                if item.weightedscore < self.array[smallerIndex].weightedscore:
                     break
                 else:
                     self.array[index],self.array[smallerIndex] = self.array[smallerIndex],self.array[index]
