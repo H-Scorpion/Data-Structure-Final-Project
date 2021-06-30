@@ -39,6 +39,15 @@ class Match():
                     first_choice.accept.removeMin()
                     first_choice.accept.insert(student_now)
                     self.studentQueue.append(lowest_student)
+                #加權分相同則看超額比序
+                elif student_now.weightedscore == lowest_student.weightedscore:
+                    if first_choice.find_overquota(lowest_student,student_now) == 1:
+                        first_choice.accept.removeMin()
+                        first_choice.accept.insert(student_now)
+                        self.studentQueue.append(lowest_student)
+                    else:
+                        self.studentQueue.append(student_now)
+                    print('overquota occured')
                 else:
                     self.studentQueue.append(student_now)
 
