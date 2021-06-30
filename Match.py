@@ -45,6 +45,9 @@ class Match():
                         first_choice.accept.removeMin()
                         first_choice.accept.insert(student_now)
                         self.studentQueue.append(lowest_student)
+                    elif first_choice.find_overquota(lowest_student,student_now) == 0:
+                        first_choice.quota += 1
+                        first_choice.accept.insert(student_now)
                     else:
                         self.studentQueue.append(student_now)
                     print('overquota occured')
