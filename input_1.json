@@ -1,7 +1,0 @@
-{
-    "schoolList":["A","B","C","D"],
-    "acceptQuota":[1, 1, 1, 1],
-    "studentList":["a","b","c","d","e"],
-    "score":[100, 95, 83, 90, 91],
-    "choice":[["A","B","C"],["A","B","C"],["A","B","C","D"],["A","B","C"],["C","B","A"]]
-}
