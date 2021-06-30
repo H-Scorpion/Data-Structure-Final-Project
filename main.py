@@ -51,7 +51,6 @@ def printResult(match):
 if __name__=="__main__":
 
     args = parseArg()
-    schoolList,acceptQuota,schoolweighted,studentList,score,choice=readData()
     match=initialize(readData())
 
     t1=time.time()
