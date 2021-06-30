@@ -9,7 +9,6 @@ Default output file name is 'input_2.josn'
 ## main
 run
 ````
-python main.py --input 
-input_3.json
+python main.py --input input_3.json
 ````
-It witt take input_3.json as input to do the matching.
+It will take input_3.json as input to do the matching.
