@@ -40,12 +40,14 @@ def printData(data):
         print(score[i],end = '\t')
         print(choice[i])
 
-if __name__ == '__main__':
+
+
+if __name__ == '__main__':    
     parser = argparse.ArgumentParser()
     parser.add_argument('--schoolNum', default=5)
     parser.add_argument('--studentNum', default=20)
     parser.add_argument('--choiceNum', default=5)
-    parser.add_argument('--output', default='input_2.json')
+    parser.add_argument('--output', default='input_5.json')
 
     args = parser.parse_args()
 

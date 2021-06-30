@@ -57,6 +57,9 @@ if __name__=="__main__":
     match.start_match()
     t2=time.time()
 
+    # for i in range(100):
+
+
     printResult(match)    
 
     print("runtime:",t2-t1)
