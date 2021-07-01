@@ -12,3 +12,8 @@ run
 python main.py --input input_3.json
 ````
 It will take input_3.json as input to do the matching.
+
+---
+## Contributors
+- b08901018 黃士賢 H-Scorpion 
+- b08901069 黃政勛 YellowJason 
