@@ -31,11 +31,16 @@ class Match():
             #若學校招生沒滿，直接錄取
             if first_choice.accept.size < first_choice.quota:
                 first_choice.accept.insert(student_now)
-            #若學校招生滿了，和目前率取最低分作比較
+            #若學校招生滿了，和目前錄取最低分作比較
             else:
                 lowest_student = first_choice.accept.peek()
                 #若申請者分數比原本的最低分高則錄取，並將原本最低分放回申請序列
                 if student_now.weightedscore > lowest_student.weightedscore:
+                    #若先前有同分超額則一次剔除
+                    while first_choice.extraquota > 0:
+                        first_choice.accept.removeMin()
+                        first_choice.extraquota -= 1
+                        first_choice.quota -= 1
                     first_choice.accept.removeMin()
                     first_choice.accept.insert(student_now)
                     self.studentQueue.append(lowest_student)
@@ -45,8 +50,9 @@ class Match():
                         first_choice.accept.removeMin()
                         first_choice.accept.insert(student_now)
                         self.studentQueue.append(lowest_student)
-                    elif first_choice.find_overquota(lowest_student,student_now) == 0:
+                    elif first_choice.find_overquota(lowest_student,student_now) == 2:
                         first_choice.quota += 1
+                        first_choice.extraquota += 1
                         first_choice.accept.insert(student_now)
                     else:
                         self.studentQueue.append(student_now)
