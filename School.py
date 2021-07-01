@@ -5,7 +5,10 @@ class School():
         self.quota = quota
         self.accept = AcceptedStudentHeap()
         self.weighted = weighted
+        #超額比序項目
         self.overquota = overquota
+        #超額的人數
+        self.extraquota = 0
     def __str__(self):
         return str(self.name)
     def find_weighted(self,student):
