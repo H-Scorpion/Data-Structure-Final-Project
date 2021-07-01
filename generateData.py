@@ -52,7 +52,7 @@ if __name__ == '__main__':
     parser.add_argument('--schoolNum', default=10)
     parser.add_argument('--studentNum', default=100)
     parser.add_argument('--choiceNum', default=10)
-    parser.add_argument('--output', default='input_5.json')
+    parser.add_argument('--output', default='input_1.json')
 
     args = parser.parse_args()
 
