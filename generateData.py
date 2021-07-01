@@ -3,7 +3,26 @@ import json
 import argparse
 
 
+
 def genData(schoolNum,studentNum,choiceNum,weighted=True):
+    '''
+    Generate school and student data for matching
+
+    Parameters
+    ----------
+    schoolNum : int
+      The number of schools for matching
+    studentNum : int
+      The number of students for matching
+    choiceNum : int
+      The number of choices a student can have
+
+    Rerutns
+    -------
+    dict
+      Return data having key for 'schoolList','acceptQuota','schoolweighted',
+      'studentList','score' and 'choice'
+    '''
     schoolList = [str(i) for i in range(1,schoolNum+1)]
     try:
         acceptQuota = [random.randint(1,studentNum*.3) for _ in range(schoolNum)]
