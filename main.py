@@ -7,7 +7,7 @@ from Student import Student
 
 def parseArg():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', default='input_5.json')
+    parser.add_argument('--input', default='input_1.json')
     args = parser.parse_args()
     return args
 
