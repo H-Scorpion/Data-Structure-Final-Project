@@ -20,10 +20,14 @@ class School():
     def find_overquota(self,student_1,student_2):
         i = 0
         #完全同分則增額錄取
-        if student_1.score == student_1.score:
+        # I don't quite understand what this means
+        if student_1.score == student_2.score:
             return 2
         while i <= 4:
             subject = self.overquota[i]
-            if student_1.score[subject] < student_1.score[subject]:
+            # run for each subject
+            # if studentLow < studentNow then kick studentLow out
+            if student_1.score[subject] < student_2.score[subject]:
                 return 1
+                # return 1 means studentNow wins
         return 0

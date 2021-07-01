@@ -1,6 +1,6 @@
 __pycache__
 .vscode
 test.py
-*.json
+*_*.json
 runtime.txt
 *.png
