@@ -41,13 +41,12 @@ class Match():
                 #若申請者分數比原本的最低分高則錄取，並將原本最低分放回申請序列
                 if student_now.weightedscore > lowest_student.weightedscore:
                     #若先前有同分超額則一次剔除
-                    while first_choice.extraquota > 0:
-                        first_choice.accept.removeMin()
+                    while first_choice.extraquota >= 0:
+                        extreaquotaStudent=first_choice.accept.removeMin()
+                        self.studentQueue.append(extreaquotaStudent)
                         first_choice.extraquota -= 1
                         first_choice.quota -= 1
-                    first_choice.accept.removeMin()
                     first_choice.accept.insert(student_now)
-                    self.studentQueue.append(lowest_student)
                 #加權分相同則看超額比序
                 elif student_now.weightedscore == lowest_student.weightedscore:
                     if first_choice.find_overquota(lowest_student,student_now) == 1:
