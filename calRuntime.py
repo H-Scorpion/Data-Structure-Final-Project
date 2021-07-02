@@ -9,6 +9,7 @@ if __name__=='__main__':
     for studentNum in range(1,100000,1000):
         data=genData(200,studentNum,5)
         match=initialize(data)
+        print(studentNum)
         t1=time.time()
         match.start_match()
         t2=time.time()
