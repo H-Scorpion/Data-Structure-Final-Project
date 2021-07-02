@@ -2,7 +2,7 @@ import time
 from generateData import genData
 from main import *
 
-fileName='runtimeList3.txt'
+fileName='runtimeHeap1.txt'
 if __name__=='__main__':
     with open(fileName,'w') as f:
         f.truncate()
