@@ -5,7 +5,7 @@ class School():
         self.name = schoolName
         self.quota = quota
         #you can choose AcceptedStudentHeap() or AcceptedStudentList()
-        self.accept = AcceptedStudentList()
+        self.accept = AcceptedStudentHeap()
         self.weighted = weighted
         self.overquota = overquota  #超額比序項目
         self.extraquota = 0         #超額的人數
