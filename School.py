@@ -5,7 +5,7 @@ class School():
         self.name = schoolName
         self.quota = quota
         #you can choose AcceptedStudentHeap() or AcceptedStudentList()
-        self.accept = AcceptedStudentHeap()
+        self.accept = AcceptedStudentList()
         self.weighted = weighted
         self.overquota = overquota  #超額比序項目
         self.extraquota = 0         #超額的人數
@@ -28,6 +28,7 @@ class School():
             # run for each subject
             # if studentLow < studentNow then kick studentLow out
             if student_1.score[subject] < student_2.score[subject]:
-                return 1
                 # return 1 means studentNow wins
+                return 1                
+            i+=1
         return 0

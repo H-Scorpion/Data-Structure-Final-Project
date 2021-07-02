@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 def initialize():
-    with open('runtime.txt','r') as f:
+    with open('runtimeList3.txt','r') as f:
         runtimeData = f.readlines()
     studentNum=[]
     runtime=[]
