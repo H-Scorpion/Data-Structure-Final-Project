@@ -1,0 +1,11 @@
+college1	students 42 10 41 99 89 68 30 70 72 8 
+college2	students 24 78 20 49 34 96 84 1 92 
+college3	students 53 82 43 28 98 17 23 
+college4	students 73 12 32 74 26 13 35 33 51 11 14 
+college5	students 77 55 93 94 79 36 40 56 63 7 71 52 
+college6	students 69 91 47 
+college7	students 97 5 57 75 16 46 19 64 54 60 90 15 85 100 
+college8	students 18 31 58 83 48 9 76 44 66 50 80 37 87 65 2 62 
+college9	students 21 3 22 27 6 88 45 
+college10	students 4 25 86 59 81 95 38 67 29 39 61 
+students without school:
