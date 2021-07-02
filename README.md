@@ -3,15 +3,15 @@ This project is about schools and students matching algorithm base on students' 
 ## Generate Testing Data
 Just run generateData.py, it will generate the school and student data in json format.
 ````
-python generateData.py --schoolNum 5 --studentNum 20 --choiceNum 3 --output input_3.json
+python generateData.py --schoolNum 5 --studentNum 20 --choiceNum 3 --output input_1.json
 ````
-Default output file name is 'input_2.josn'
+Default output file name is 'input_1.json'
 ## main
 run
 ````
-python main.py --input input_3.json
+python main.py --input input_1.json --output output_1.txt
 ````
-It will take input_3.json as input to do the matching.
+It will take input_1.json as input to do the matching.
 
 ---
 ## Contributors

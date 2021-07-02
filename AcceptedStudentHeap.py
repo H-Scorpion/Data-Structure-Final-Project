@@ -50,6 +50,7 @@ class AcceptedStudentHeap: #Please store and implement MinHeap data structure wi
             return self.array[0]
     def removeMin(self):
         if len(self.array) == 1:
+            self.size -= 1
             return self.array.pop()
         else:
             item = self.array.pop() #get the last element of the heap

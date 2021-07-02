@@ -8,6 +8,7 @@ from Student import Student
 def parseArg():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', default='input_1.json')
+    parser.add_argument('--output', default='output_1.txt')
     args = parser.parse_args()
     return args
 
@@ -55,6 +56,19 @@ def printResult(match):
         print(i,end = ' ')
     print('\n',end = '')
 
+def outputResult(match):
+    with open(args.output, 'w') as output:
+        for i in match.schoolList.keys():
+            output.write('college'+i+'\t')
+            output.write('students ')
+            for j in match.schoolList[i].accept.array:
+                output.write(str(j)+' ')
+            output.write('\n')
+        output.write('students without school:')
+        for i in match.failedStudent:
+            output.write(str(i)+' ')
+        output.write('\n')
+
 if __name__=="__main__":
 
     args = parseArg()
@@ -64,7 +78,8 @@ if __name__=="__main__":
     match.start_match()
     t2=time.time()
 
-    printResult(match)    
+    printResult(match)
+    outputResult(match)
 
     print("runtime:",t2-t1)
 
