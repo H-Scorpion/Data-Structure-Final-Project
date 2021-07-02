@@ -4,6 +4,7 @@ class School():
     def __init__(self,schoolName,quota,weighted,overquota):
         self.name = schoolName
         self.quota = quota
+        #you can choose AcceptedStudentHeap() or AcceptedStudentList()
         self.accept = AcceptedStudentHeap()
         self.weighted = weighted
         self.overquota = overquota  #超額比序項目
