@@ -1,11 +1,11 @@
-college1	students 42 10 41 99 89 68 30 70 72 8 
-college2	students 24 78 20 49 34 96 84 1 92 
-college3	students 53 82 43 28 98 17 23 
-college4	students 73 12 32 74 26 13 35 33 51 11 14 
-college5	students 77 55 93 94 79 36 40 56 63 7 71 52 
-college6	students 69 91 47 
-college7	students 97 5 57 75 16 46 19 64 54 60 90 15 85 100 
-college8	students 18 31 58 83 48 9 76 44 66 50 80 37 87 65 2 62 
-college9	students 21 3 22 27 6 88 45 
-college10	students 4 25 86 59 81 95 38 67 29 39 61 
+college1	students 11 77 15 29 90 44 50 51 25 10 81 24 66 
+college2	students 35 65 40 16 78 33 12 57 62 37 36 94 99 52 
+college3	students 67 49 85 26 7 6 71 
+college4	students 5 59 18 54 32 53 88 
+college5	students 69 38 46 1 80 45 
+college6	students 23 31 83 76 87 72 75 20 41 42 91 30 
+college7	students 8 56 73 84 21 28 63 55 79 96 97 
+college8	students 9 3 2 17 89 34 47 60 70 82 19 
+college9	students 39 13 92 64 93 61 27 14 74 43 98 48 100 
+college10	students 22 68 86 4 95 58 
 students without school:

@@ -8,6 +8,7 @@ from Student import Student
 def parseArg():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', default='input_1.json')
+    parser.add_argument('--output', default='output_1.txt')
     args = parser.parse_args()
     return args
 
@@ -56,7 +57,7 @@ def printResult(match):
     print('\n',end = '')
 
 def outputResult(match):
-    with open("output_1.txt", "w") as output:
+    with open(args.output, 'w') as output:
         for i in match.schoolList.keys():
             output.write('college'+i+'\t')
             output.write('students ')
