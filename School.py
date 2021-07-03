@@ -1,5 +1,6 @@
-from AcceptedStudentHeap import AcceptedStudentHeap
-from AcceptedStudentList import AcceptedStudentList
+from dataStructures.AcceptedStudentHeap import AcceptedStudentHeap 
+from dataStructures.AcceptedStudentList import AcceptedStudentList
+
 class School():
     def __init__(self,schoolName,quota,weighted,overquota):
         self.name = schoolName
