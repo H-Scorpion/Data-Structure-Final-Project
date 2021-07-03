@@ -23,7 +23,9 @@ def genData(schoolNum,studentNum,choiceNum,weighted=True):
       Return data having key for 'schoolList','acceptQuota','schoolweighted',
       'studentList','score' and 'choice'
     '''
+    
     schoolList = [str(i) for i in range(1,schoolNum+1)]
+    assert choiceNum<=len(schoolList)
     try:
         acceptQuota = [random.randint(1,studentNum*.3) for _ in range(schoolNum)]
     except:
@@ -86,5 +88,5 @@ if __name__ == '__main__':
     printData(data)
     
     ret=json.dumps(data)
-    with open(args.output,'w') as f:
+    with open("./inputData/"+args.output,'w') as f:
         f.write(ret)
