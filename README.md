@@ -11,38 +11,47 @@ file format: json
 location: ./inputData
 ```json
 {
-    "schoolList": ["school1","school2","school3","school4""school5"],
-    "acceptQuota":[school1quota,school2quota], // int
+    "schoolList": ["school1","school2","school3","school4","school5"],
+    "acceptQuota":[20, 50, 30, 40, 10],  
+    "//": "school 1 accepts 20 students, and so on",  
+
     "schoolweighted":[
-        [subj1,subj2,subj3,subj4,subj5],  
-        //weighting of each subject for school1
-        [subj1,subj2,subj3,subj4,subj5]  
-        //weighting of each subject for school2
+        [[3, 0, 2, 3, 3], [0, 1, 0, 0, 3], [2, 1, 1, 1, 0], [2, 2, 3, 3, 2], [0, 2, 3, 3, 0]], 
     ],
+    "//schoolweighted":"weighting of each subject for schools, ranging from 0 to 3",  
+
     "overquota": [
         [2, 3, 4, 0, 1],  
         //超額比序先比科目2，再比科目3，依此類推
         [0, 1, 2, 3, 4],  
         //超額比序先比科目0，再比科目1，依此類推 
         [0, 3, 4, 5, 1]],  
-        //超額比序先比科目0，再比科目3，依此類推 
-    "studentList": ["1", "2", "3", "4", "5"], //list for each student
+    "//":"school 1:超額比序先比科目2，再比科目3，依此類推",
+    "//":"school 2:超額比序先比科目0，再比科目1，依此類推",  
+      
+    "studentList": ["1", "2", "3", "4", "5"],
+    "//":"list for each student",  
+
     "score":[  
-        [54, 67, 44, 56, 100],  
-        //student 1 get 54 in subject 1, 67 in subject 2, and so on.
+        [54, 67, 44, 56, 100],          
         [34, 28, 63, 25, 83],
         [83, 2, 11, 33, 47],
         [63, 44, 13, 7, 84],
         [89, 82, 34, 48, 28]],
+    "//":"student 1 get 54 in subject 1, 67 in subject 2, and so on.",  
+    
     "choice": [
         ["4", "2", "1", "3", "5"],  
-        //for student 1 school 4 is his/her first choice, followed by school 2, and so on.
         ["3", "4", "1", "5", "2"], 
         ["2", "1", "4", "5", "3"], 
         ["3", "1", "4", "2", "5"], 
-        ["4", "1", "5", "3", "2"]]}
+        ["4", "1", "5", "3", "2"]],
+    "//":"for student 1 school 4 is his/her first choice, followed by school 2, and so on."
 }
-```  
+```
+PS:Length of school data should match, and so does student data  
+Here we omit some of the data for simplicity
+  
 To run run
 ````
 python main.py --input input_1.json --output output_1.txt
