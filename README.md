@@ -2,7 +2,7 @@
 ## Exam Matching Algorithm 
 This project is about schools and students matching algorithm based on students' score and their choices of schools. We will implement the algorithm using different data structures and discuss the math behind them.
 ## Matching Flow Chart
-
+![iamge](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/flow%20chart.png)
 
 ## Matching Result
 
