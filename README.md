@@ -2,10 +2,10 @@
 ## Exam Matching Algorithm 
 This project is about schools and students matching algorithm based on students' score and their choices of schools. We will implement the algorithm using different data structures and discuss the math behind them.
 ## Matching Flow Chart
-![picture 1](images/23b8e0c49d0010c1de34493612caa5382de585d72752f488184ac5e4e0c11305.png)  
+
 
 ## Matching Result
-![picture 2](images/a18477e7e821b386815f72bee9ffe4b30143dbe2c4d491a9f080446c2c5a54c9.png)  
+
 
 ## Different Data Structure
 ## To Run Our Code
