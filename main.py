@@ -12,8 +12,8 @@ def parseArg():
     args = parser.parse_args()
     return args
 
-def readData():
-    with open(args.input,'r') as f:
+def readData(args):
+    with open('./inputData/'+args.input,'r') as f:
         data=json.load(f)
 
     assert len(data['schoolList'])==len(data['acceptQuota'])        
@@ -56,8 +56,8 @@ def printResult(match):
         print(i,end = ' ')
     print('\n',end = '')
 
-def outputResult(match):
-    with open(args.output, 'w') as output:
+def outputResult(match,args):
+    with open('./outputData/matchingResult'+args.output, 'w') as output:
         for i in match.schoolList.keys():
             output.write('college'+i+'\t')
             output.write('students ')
@@ -72,14 +72,14 @@ def outputResult(match):
 if __name__=="__main__":
 
     args = parseArg()
-    match=initialize(readData())
+    match=initialize(readData(args))
 
     t1=time.time()
     match.start_match()
     t2=time.time()
 
     printResult(match)
-    outputResult(match)
+    outputResult(match,args)
 
     print("runtime:",t2-t1)
 

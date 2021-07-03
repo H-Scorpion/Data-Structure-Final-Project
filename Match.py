@@ -1,4 +1,3 @@
-from AcceptedStudentHeap import AcceptedStudentHeap
 class Match():
     def __init__(self):
         self.studentQueue = []
