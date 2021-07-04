@@ -58,7 +58,7 @@ def printResult(match):
     print('\n',end = '')
 
 def outputResult(match,args):
-    with open('./outputData/matchingResult'+args.output, 'w') as output:
+    with open('./outputData/matchingResult/'+args.output, 'w') as output:
         for i in match.schoolList.keys():
             output.write('college'+i+'\t')
             output.write('lowest score '+str(match.schoolList[i].accept.array[0].weightedscore)+'\t')
