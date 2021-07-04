@@ -1,5 +1,7 @@
 __pycache__
 .vscode
 test.py
-*_*.json
+*.json
+*.txt
 runtime.txt
+!input_1.json

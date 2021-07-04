@@ -1,6 +1,0 @@
-college1	students 5 
-college2	students 3 
-college3	students 4 
-college4	students 1 
-college5	students 2 
-students without school:
