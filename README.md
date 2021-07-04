@@ -39,6 +39,13 @@ The module requires matplotlib.pyplot
 ## main.py
 This progam implements the matching algorithm.  
 It takes input Data of the schools and the students and write the matching result in an output file
+
+run 
+````
+python main.py --input input_1.json --output output_1.txt
+````
+It will take input_1.json in inputData as input to do the matching, then write the result in output_1.txt in the directory "outputData"
+
 ### input
 file format: json  
 location: ./inputData
@@ -83,11 +90,7 @@ location: ./inputData
 PS:Length of school data should match, and so does student data  
 Here we omit some of the data for simplicity
   
-To run run
-````
-python main.py --input input_1.json --output output_1.txt
-````
-It will take input_1.json in inputData as input to do the matching, then write the result in output_1.txt in the directory "outputData"
+
 
 ## Generate Testing Data
 Just run generateData.py, it will generate the school and student data in json format.  

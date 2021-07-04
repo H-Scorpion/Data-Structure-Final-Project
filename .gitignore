@@ -3,5 +3,7 @@ __pycache__
 test.py
 *.json
 *.txt
-runtime.txt
+!runtimeHeap.txt
+!runtimeList.txt
+!output_1.txt
 !input_1.json
