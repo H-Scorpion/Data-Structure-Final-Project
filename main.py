@@ -47,6 +47,7 @@ def printResult(match):
     #列印榜單
     for i in match.schoolList.keys():
         print('college',i,end = '\t')
+        print('lowest score', match.schoolList[i].accept.array[0].weightedscore,end = '\t')
         print('students',end = ' ')
         for j in match.schoolList[i].accept.array:
             print(j,end = ' ')
@@ -60,6 +61,7 @@ def outputResult(match):
     with open(args.output, 'w') as output:
         for i in match.schoolList.keys():
             output.write('college'+i+'\t')
+            output.write('lowest score '+str(match.schoolList[i].accept.array[0].weightedscore)+'\t')
             output.write('students ')
             for j in match.schoolList[i].accept.array:
                 output.write(str(j)+' ')
