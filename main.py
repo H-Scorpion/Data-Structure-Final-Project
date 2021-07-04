@@ -1,9 +1,9 @@
 import json
 import argparse
 import time
-from Match import Match
-from School import School   
-from Student import Student
+from matchingPackage.Match import Match
+from matchingPackage.School import School   
+from matchingPackage.Student import Student
 
 def parseArg():
     parser = argparse.ArgumentParser()
