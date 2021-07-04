@@ -1,11 +1,5 @@
-college1	students 42 35 11 68 8 51 56 27 
-college2	students 6 24 82 86 87 30 43 9 47 29 93 100 
-college3	students 46 77 40 41 20 49 61 97 
-college4	students 38 1 2 5 73 79 22 
-college5	students 78 25 19 58 15 53 94 
-college6	students 7 67 91 21 71 76 99 18 52 10 69 36 12 92 45 
-college7	students 32 50 31 96 65 72 80 16 59 
-college8	students 28 88 89 17 83 23 85 64 14 
-college9	students 62 57 54 90 60 70 74 37 95 4 
-college10	students 63 33 98 55 13 44 66 3 48 34 75 26 81 39 84 
-students without school:
+college1	lowest score 221	students 4 
+college2	lowest score 637	students 2 
+college3	lowest score 456	students 1 
+college4	lowest score 155	students 5 
+students without school:3 
