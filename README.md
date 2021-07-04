@@ -1,7 +1,8 @@
 # Data-Structure-Final-Project
 ## Exam Matching Algorithm 
 This project is about schools and students matching algorithm based on students' score and their choices of schools. We will implement the algorithm using different data structures and discuss the math behind them.
-
+## Introduction
+[![Watch the video](https://img.youtube.com/vi/Ss4w4jghqXc/hqdefault.jpg)](https://youtu.be/Ss4w4jghqXc)
 
 ## Matching Flow Chart
 ![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/flow%20chart.png)
