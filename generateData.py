@@ -16,6 +16,8 @@ def genData(schoolNum,studentNum,choiceNum,weighted=True):
       The number of students for matching
     choiceNum : int
       The number of choices a student can have
+    weighted: bool
+      The score will be weighted if weighted==True
 
     Rerutns
     -------
@@ -84,7 +86,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    data = genData(int(args.schoolNum),int(args.studentNum),int(args.choiceNum),bool(args.weighted))
+    data = genData(int(args.schoolNum),int(args.studentNum),int(args.choiceNum),int(args.weighted))
     printData(data)
     
     ret=json.dumps(data)
