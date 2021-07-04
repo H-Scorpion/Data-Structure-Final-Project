@@ -1,18 +1,27 @@
 # Data-Structure-Final-Project
 ## Exam Matching Algorithm 
 This project is about schools and students matching algorithm based on students' score and their choices of schools. We will implement the algorithm using different data structures and discuss the math behind them.
+
+
 ## Matching Flow Chart
-![iamge](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/flow%20chart.png)
+![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/flow%20chart.png)
 
 ## Implementation & Matching Result
-
+### Matching Data
+![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/matching%20data.png)
+### Output Result
+![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/matching%20result.png)
 
 ## Different Data Structure
-1. Min Heap: O(k\*n\*log(n))
-2. Ordered List: O(k*n<sup>2</sup>)
+### 1. Min Heap: O(k\*n\*log(n))
+![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/heap.png)
+### 2. Ordered List: O(k\*n<sup>2</sup>)
+![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/list.png)
+### Min Heap vs Ordered List
+![image](https://github.com/H-Scorpion/Data-Structure-Final-Project/blob/main/images/both.png)
 
 ## Project Structure
-### ./dataStructure
+### ./dataStructures
 The directory stores the data structures implemented in our project, including min heap and ordered list.  
 We can choose to implement different data structure in line 9 in Student.py
 ### ./inputData
