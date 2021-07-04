@@ -20,7 +20,9 @@ The directory stores the input data for matching. An example input data "input_1
 ### ./matchingPackage
 This is the package for matching. It contians Student, School and Match three classes
 ### ./outputData
-The directory stores the ouput data, which includes the matching result(in matchingResult) and runtime data(in runtimeData)
+The directory stores the ouput data, which includes the matching result(in matchingResult) and runtime data(in runtimeData)  
+We've provide the output_1.txt for the result of input_1.json.
+Runtime data runtimeHeap.txt and runtimeList.txt are provided as well
 ### main.py
 Implement the matching algorithm
 ### generateData.py
